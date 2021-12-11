@@ -17,7 +17,38 @@ const questions =  () => {
                  return false;
              }
          }
-        }//comma here
+        },
+        {
+        type: 'input',
+        name: 'description',
+        message: 'Provide a description of the project: (Required)',
+        validate: descriptionInput => {
+            if (descriptionInput) {
+                return true;
+            } else {
+                console.log('Please provide a description of the project!');
+                return false;
+            }
+        }
+      },
+      {
+          type: 'confirm',
+          name: 'confirmInstallations',
+          message: 'Would you like to provide installation instructions?',
+          default: true
+      },
+      {
+          type: 'input',
+          name: 'installation',
+          message: 'Provide installation instructions:',
+          when: ({ confirmInstallations }) => {
+              if (confirmInstallations) {
+                  return true;
+              } else {
+                  return false;
+              }
+          }
+      }//comma
     ])
 }
 
