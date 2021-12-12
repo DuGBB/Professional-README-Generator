@@ -47,6 +47,14 @@ if (data.confirmInstallations) {
   `;
 
 }
+
+valueReturn = `${valueReturn}
+  ## Usage Information
+  ---
+  ${data.usage}
+
+  `;
+
 return valueReturn;
 }
 

@@ -40,12 +40,24 @@ const questions =  () => {
       {
           type: 'input',
           name: 'installation',
-          message: 'Provide installation instructions:',
+          message: 'Provide installation instructions.',
           when: ({ confirmInstallations }) => {
               if (confirmInstallations) {
                   return true;
               } else {
                   return false;
+              }
+          }
+      },
+      {
+          type: 'input',
+          name: 'usage',
+          message: 'Provide usage information. (Required)',
+          validate: usageInfo => {
+              if (usageInfo) {
+                  return true;
+              } else {
+                  console.log('Please provide the usage information!');
               }
           }
       }//comma
