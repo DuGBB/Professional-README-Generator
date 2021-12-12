@@ -58,9 +58,43 @@ const questions =  () => {
                   return true;
               } else {
                   console.log('Please provide the usage information!');
+                  return false;
               }
           }
+      },
+      {
+          type: 'input',
+          name: 'contribution',
+          message: 'Provide contribution guidelines. (Required)',
+          validate: conGuideInput => {
+              if (conGuideInput) {
+                  return true;
+              } else {
+                  console.log('Please provide the contribution guidelines!');
+                  return false;
+              }
+          }
+      },
+      {
+          type: 'input',
+          name: 'test',
+          message: 'Provide test instructions. (Required)',
+          validate: testInstructions => {
+              if (testInstructions) {
+                  return true;
+              } else {
+                  console.log('Please provide test instructions!');
+                  return false;
+              }
+          }
+      },
+      {
+          type: 'list',
+          name: 'license',
+          message: 'Choose a license. (Require)',
+          choices: ['Apache License 2.0', 'BSD 2-Clause', 'GNU(GPL)', 'MIT', 'Mozilla', 'Eclipse']
       }//comma
+      
     ])
 }
 
