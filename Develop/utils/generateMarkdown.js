@@ -67,6 +67,8 @@ function generateMarkdown(data) {
   ${data.description}
 
 `;
+
+
 if (data.confirmInstallations) {
   valueReturn = `${valueReturn}
   ## Installation
@@ -89,6 +91,14 @@ if (data.confirmInstallations) {
   ## Tests
   ---
   ${data.test}
+
+  ## GitHub Username
+  ---
+  ${data.github}
+
+  ## Email Address
+  ---
+  To reach out to me with additional questions/comments, contact me at ${data.email} 
 
   `;
 

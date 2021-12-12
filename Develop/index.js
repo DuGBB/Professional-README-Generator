@@ -93,9 +93,33 @@ const questions =  () => {
           name: 'license',
           message: 'Choose a license. (Require)',
           choices: ['Apache License 2.0', 'BSD 2-Clause', 'GNU(GPL)', 'MIT', 'Mozilla', 'Eclipse']
-      }//comma
-      
-    ])
+      },
+      {
+          type: 'input',
+          name: 'github',
+          message: 'Enter your GitHub username. (required)',
+          validate: githubInput => {
+              if (githubInput) {
+                  return true;
+              } else {
+                  console.log('Please enter your GitHub username!');
+                  return false
+              }
+          }
+      },
+      {
+          type: 'input',
+          name: 'email',
+          message: 'Enter your email address. (Required)',
+          validate: emailInput => {
+              if (emailInput) {
+                  return true;
+              } else {
+                  console.log("Please enter your email address!");
+              }
+          }
+      }  
+   ])
 }
 
 // TODO: Create a function to write README file
