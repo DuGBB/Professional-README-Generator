@@ -16,19 +16,6 @@ const writeFile = fileContent => {
   });
 };
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   console.log("BooYahh");
 
@@ -58,46 +45,45 @@ function generateMarkdown(data) {
   
   ${badge}
 
-  ## License
-  ---
+  # License 
+  
   This project is using the open source license ${data.license}.
 
-  ## Project Description 
-  ---
+  # Project Description  
+  
   ${data.description}
 
-`;
+  # Table of Contents 
+  
+  1. [Installation](#installation)
+  2. [Usage](#usage)
+  3. [Contributing](#contributing)
+  4. [Tests](#tests)
+  5. [GitHub Username](#github-username)
+  6. [Email Address](#email-address)
 
-
-if (data.confirmInstallations) {
-  valueReturn = `${valueReturn}
-  ## Installation
-  ---
+  # Installation 
+  
   ${data.installation}
   
-  `;
-
-}
-
-  valueReturn = `${valueReturn}
-  ## Usage
-  ---
+  # Usage 
+  
   ${data.usage}
 
-  ## Contributing
-  ---
+  # Contributing 
+  
   ${data.contribution}
 
-  ## Tests
-  ---
+  # Tests 
+  
   ${data.test}
 
-  ## GitHub Username
-  ---
+  # GitHub Username 
+  
   ${data.github}
 
-  ## Email Address
-  ---
+  # Email Address 
+  
   To reach out to me with additional questions/comments, contact me at ${data.email} 
 
   `;

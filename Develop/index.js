@@ -32,19 +32,14 @@ const questions =  () => {
         }
       },
       {
-          type: 'confirm',
-          name: 'confirmInstallations',
-          message: 'Would you like to provide installation instructions?',
-          default: true
-      },
-      {
           type: 'input',
           name: 'installation',
-          message: 'Provide installation instructions.',
-          when: ({ confirmInstallations }) => {
+          message: 'Provide installation instructions. (Required)',
+          validate: confirmInstallations => {
               if (confirmInstallations) {
                   return true;
               } else {
+                  console.log('Please provide3 installation instructions');
                   return false;
               }
           }
