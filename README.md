@@ -35,4 +35,4 @@
   # Screenshot
   ![Professional-README-Generator](Develop/src/images/readme.png?raw=true "Professional-README-Generator")
 
-  
+  To view the video showcasing the required elements: https://watch.screencastify.com/v/eUKCAleyJ4N1MwZWuPSR 
