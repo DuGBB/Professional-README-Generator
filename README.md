@@ -33,6 +33,6 @@
   To reach out to me with additional questions/comments, contact me at DuGsEmail@yahoo.com 
   
   # Screenshot
-  ![Professional-README-Generator](Develop/utils/images/readme.png?raw=true "Professional-README-Generator")
+  ![Professional-README-Generator](Develop/src/images/readme.png?raw=true "Professional-README-Generator")
 
   
